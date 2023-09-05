@@ -20,7 +20,7 @@ def extract_virtual_texture_info(resource_node):
 
 
 # Load and parse the XML file
-tree = ET.parse('_merged.lsx')
+tree = ET.parse('Characters/Humans/[PAK]_Female_Armor/_merged.lsx')
 root = tree.getroot()
 
 # Find the region with id="MaterialBank"
