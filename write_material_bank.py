@@ -31,7 +31,7 @@ texture_suffix_dict = {
 }
 
 # Load and parse the XML file
-tree = ET.parse('Characters/Humans/[PAK]_Female_Armor/_merged.lsx')
+tree = ET.parse('Shared/Content/Assets/Characters/Humans/[PAK]_Female_Armor/_merged.lsx')
 root = tree.getroot()
 # Find the region with id="MaterialBank"
 material_bank_region = root.find(".//region[@id='MaterialBank']")
@@ -53,8 +53,8 @@ if material_bank_region is not None:
                 for texture_param_name in ["basecolor", "normalmap", "physicalmap"]:
                     uuid4 = str(uuid.uuid4())
                     texture2d_parameters_node = ET.Element("node", id="Texture2DParameters")
-                    attribute_enabled = ET.Element("attribute", id="Enabled", type="bool", value="False")
-                    attribute_export_as_preset = ET.Element("attribute", id="ExportAsPreset", type="bool", value="True")
+                    attribute_enabled = ET.Element("attribute", id="Enabled", type="bool", value="True")
+                    attribute_export_as_preset = ET.Element("attribute", id="ExportAsPreset", type="bool", value="False")
                     attribute_group_name = ET.Element("attribute", id="GroupName", type="FixedString", value="")
                     attribute_id = ET.Element("attribute", id="ID", type="FixedString", value=uuid4)
                     attribute_ignore_texel_density = ET.Element("attribute", id="IgnoreTexelDensity", type="bool",
