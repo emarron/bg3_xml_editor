@@ -27,7 +27,7 @@ for node in root.findall('.//node'):
             
             # Copy the source file to the destination folder
             shutil.copy(source_file_path, os.path.join(destination_folder, os.path.basename(source_file_value)))
-            print(f"Copied: {source_file_path} to {destination_folder}")
+            # print(f"Copied: {source_file_path} to {destination_folder}")
         else:
             print(f"Source file does not exist: {source_file_path}")
 
