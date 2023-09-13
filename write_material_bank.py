@@ -1,8 +1,6 @@
 import uuid
 import xml.etree.ElementTree as ET
 
-
-# todo: use virtual texture name instead of material bank name
 # todo: write PM as SRGB: FALSE, or just do it after :shrug:
 # todo: rewrite this to NOT be a piece of trash.
 
