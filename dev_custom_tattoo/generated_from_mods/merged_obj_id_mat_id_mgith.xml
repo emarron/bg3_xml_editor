@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="GTY_Yul.Yul_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="e551b543-036d-4552-99c0-caa39ba65a98" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="GTY_Yul.Yul_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="e551b543-036d-4552-99c0-caa39ba65a98" />
+    </node>
+</root>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="J_MHEB_edit.C_J_MHEB_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="7468b023-67a5-4500-b234-66d2758e2142" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="J_MHEB_edit.C_J_MHEB_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="7468b023-67a5-4500-b234-66d2758e2142" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="TIFJo.TIF_M_NKD_Head_C_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="b7233025-4053-4fe0-8adc-b63e8542b657" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="TIFJo.TIF_M_NKD_Head_C_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="b7233025-4053-4fe0-8adc-b63e8542b657" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="ArmoTiefling.ArmoTiefling_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="f111e27f-ba3e-4bad-8ae3-7bb1d7b4878e" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="ArmoTiefling.ArmoTiefling_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="f111e27f-ba3e-4bad-8ae3-7bb1d7b4878e" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kaemon.Kaemon_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="f73a0408-df65-4369-8878-49076b08a709" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kaemon.Kaemon_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="f73a0408-df65-4369-8878-49076b08a709" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kai.Kai_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="73a4cbbd-0f36-4103-8eab-a0675d03d477" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kai.Kai_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="73a4cbbd-0f36-4103-8eab-a0675d03d477" />
+    </node>
+</root>

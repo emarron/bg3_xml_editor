@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="TIFJo.TIF_M_NKD_Head_C_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="d8afe57e-6ff8-4005-9ff1-72a91455bb8d" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="TIFJo.TIF_M_NKD_Head_C_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="d8afe57e-6ff8-4005-9ff1-72a91455bb8d" />
+    </node>
+</root>

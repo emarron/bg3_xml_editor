@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kaisa.Kaisa_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="8e34316f-54af-43db-8500-0a9ab80849e2" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Kaisa.Kaisa_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="8e34316f-54af-43db-8500-0a9ab80849e2" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Maisa.Maisa_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="07cfcef5-baff-40ca-9494-0099df8b6020" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Maisa.Maisa_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="07cfcef5-baff-40ca-9494-0099df8b6020" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Olena.Olena_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="45bba44f-490d-4f69-9d4d-7c03714174b2" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Olena.Olena_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="45bba44f-490d-4f69-9d4d-7c03714174b2" />
+    </node>
+</root>

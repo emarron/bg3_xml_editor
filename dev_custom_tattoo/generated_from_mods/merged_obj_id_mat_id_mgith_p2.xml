@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="P4_GTY_M_HEL_E.P4_GTY_M_HEL_E_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="7283ad83-9d68-4276-a382-9a9b2f8b0096" />
+    </node>
+</root>

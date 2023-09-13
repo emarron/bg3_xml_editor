@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Blue.Blue_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="91dcc48c-9d88-40a0-8c25-257923616bc1" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Blue.Blue_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="91dcc48c-9d88-40a0-8c25-257923616bc1" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Lielou.Lielou_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="ce5233e2-f300-4979-87d1-29cf0e019a67" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Lielou.Lielou_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="ce5233e2-f300-4979-87d1-29cf0e019a67" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Lilith.Lilith_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="1865da22-76b2-4891-ba88-2f42cd2f900a" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="HUM_Lilith.Lilith_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="1865da22-76b2-4891-ba88-2f42cd2f900a" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Emelina.Emelina_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="2b918924-7fbe-493a-8d04-f9f300667d77" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Emelina.Emelina_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="2b918924-7fbe-493a-8d04-f9f300667d77" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Iarna.Iarna_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="8afbabee-eb0d-4463-992f-5349af77f009" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Iarna.Iarna_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="8afbabee-eb0d-4463-992f-5349af77f009" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Maura.Maura_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="4c556c29-c830-45a3-bdfd-b8e42a149938" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Maura.Maura_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="4c556c29-c830-45a3-bdfd-b8e42a149938" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Palaga.Palaga_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="7eed84a0-ec42-477c-b451-fb1a83e3d2c0" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Palaga.Palaga_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="7eed84a0-ec42-477c-b451-fb1a83e3d2c0" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Queenyphe.Queenyphe_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="14ea408e-378b-4f8e-ab2c-7495152b0e32" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Queenyphe.Queenyphe_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="14ea408e-378b-4f8e-ab2c-7495152b0e32" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Rauni.Rauni_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="811e33ac-0f14-43ce-b6fd-b6f2634db177" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Rauni.Rauni_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="811e33ac-0f14-43ce-b6fd-b6f2634db177" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Queenyphe.Queenyphe_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="2b263656-d959-4ae3-a54c-1075f3c5c193" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Queenyphe.Queenyphe_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="2b263656-d959-4ae3-a54c-1075f3c5c193" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Tarja.Tarja_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="031aba5f-b325-450e-a4ec-97349a859873" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Tarja.Tarja_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="031aba5f-b325-450e-a4ec-97349a859873" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Tuiia.Tuiia_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="ee2effc0-e020-4397-9946-fb074ca1152e" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Tuiia.Tuiia_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="ee2effc0-e020-4397-9946-fb074ca1152e" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Zoja.Zoja_Mesh.0" />
+        <attribute id="MapValue" type="FixedString" value="0833af09-8574-4243-a9e4-bed84d005cda" />
+    </node>
+    <node id="Object">
+        <attribute id="MapKey" type="FixedString" value="Zoja.Zoja_Ears_Mesh.3" />
+        <attribute id="MapValue" type="FixedString" value="0833af09-8574-4243-a9e4-bed84d005cda" />
+    </node>
+</root>
