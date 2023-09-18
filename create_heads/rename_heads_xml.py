@@ -7,8 +7,11 @@ from tkinter import filedialog
 
 
 def check_file_existence(file_path):
+    # make sure its a path
     file_path = Path(file_path)
-    if not file_path.exists():
+    # for some reason this isn't case sensitive so here's a work around.
+    path_as_str = str(file_path)
+    if path_as_str not in str(file_path.resolve()):
         output_text.config(state=tk.NORMAL)
         output_text.delete(1.0, tk.END)  # Clear existing text
         output_text.insert(tk.END, f"The file '{file_path}' does not exist. Exiting program.\n")
