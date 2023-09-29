@@ -1,6 +1,7 @@
 import uuid
 import xml.etree.ElementTree as ET
 
+
 # todo: write PM as SRGB: FALSE, or just do it after :shrug:
 # todo: rewrite this to NOT be a piece of trash.
 
@@ -73,10 +74,11 @@ if material_bank_region is not None:
                                                                     value="False")
                             attribute_group_name = ET.Element("attribute", id="GroupName", type="FixedString", value="")
                             attribute_id = ET.Element("attribute", id="ID", type="FixedString", value=uuid4)
-                            attribute_ignore_texel_density = ET.Element("attribute", id="IgnoreTexelDensity", type="bool",
+                            attribute_ignore_texel_density = ET.Element("attribute", id="IgnoreTexelDensity",
+                                                                        type="bool",
                                                                         value="True")
                             attribute_parameter_name = ET.Element("attribute", id="ParameterName", type="FixedString",
-                                                                value=texture_param_name)
+                                                                  value=texture_param_name)
 
                             texture2d_parameters_node.extend([
                                 attribute_enabled,
