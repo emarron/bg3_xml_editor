@@ -14,7 +14,11 @@ def remove_real_material_overrides_children(tree):
         
         # If <children> exists, clear its content
         if children is not None:
-            children.clear()
+            object_nodes = children.findall(".//node[@id='Object']")
+            for object_node in object_nodes:
+                mapkey_node = object_node.find(".//attribute[@id='MapKey']")
+                if mapkey_node is not None and "Head" in mapkey_node.get('value'):
+                    children.remove(object_node)
 
 def process_xml_files_in_dirs(dir_path, output_dir):
     dir_path = Path(dir_path)
@@ -31,6 +35,6 @@ def process_xml_files_in_dirs(dir_path, output_dir):
         output_file = output_dir / file_path.name
         tree.write(output_file, encoding='utf-8')
 
-dir_path = "eyes"
-output_dir = "empty"
+dir_path = "current"
+output_dir = "headless"
 process_xml_files_in_dirs(dir_path, output_dir)

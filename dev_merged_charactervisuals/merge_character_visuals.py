@@ -77,7 +77,7 @@ def merge_xml_files_in_dirs(dir1,dir2, output_dir):
             output_file = output_dir / file_path1.name
             merge_xml_trees(tree1, tree2, output_file)
 
-dir1 = "empty"
-dir2 = "body"
-output_dir = "empty_body"
+dir1 = "body"
+dir2 = "head"
+output_dir = "body_head"
 merge_xml_files_in_dirs(dir1, dir2, output_dir)
