@@ -1,3 +1,4 @@
+#removes realmaterialoverrides from given directory's xml/lsx
 import xml.etree.ElementTree as ET
 from pathlib import Path
 

@@ -1,3 +1,4 @@
+#merges visual banks and material banks of given directories' xml/lsx/whatever
 from pathlib import Path
 import xml.etree.ElementTree as ET
 

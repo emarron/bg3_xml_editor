@@ -1,1 +1,9 @@
 /data/
+*.lsx
+*.xml
+*.pak
+*.DDS
+*.GR2
+*.lsf
+*.loca
+*.bak

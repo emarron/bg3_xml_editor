@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from tkinter import filedialog
 
+# create variant that accepts "_REMAPPED"
 
 def check_file_existence(file_path):
     # make sure its a path

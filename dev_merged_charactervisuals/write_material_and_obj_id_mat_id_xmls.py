@@ -1,3 +1,6 @@
+# given directory, and xml(s) meeting some naming criteria, xml(s) contents meeting some criteria, changes the contents' UUID, then parameters and finally creates a map of the ObjectID --> new MaterialUUID for RealMaterialOverrides.
+
+
 import uuid
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -82,7 +85,7 @@ def parse_xml(xml):
                                             [obj_node_name.get("value"), uuid4])
                             resource_node_id.set("value", uuid4)
                             output_mat_root.append(resource_node)
-                            bool_makeup, bool_tattoo = False,False
+                            bool_makeup, bool_tattoo = False, False
                     children_element = None
         obj_id_mat_id_root = ET.Element("root")
         for pair in list_obj_id_mat_id:

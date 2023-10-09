@@ -1,3 +1,4 @@
+#filters "obj_id_mat_id" by %given% substring
 import xml.etree.ElementTree as ET
 from pathlib import Path
 # Sample XML content

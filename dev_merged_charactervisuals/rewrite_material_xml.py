@@ -1,3 +1,5 @@
+# given directory, and xml(s) meeting some naming criteria, xml(s) contents meeting some criteria, changes the contents' parameters and outputs to new file.
+
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -65,10 +67,6 @@ def write_xmls(material_root):
                         encoding="utf-8", xml_declaration=True)
     print(f"Modified XML written to '{str(material_output)}'.")
 
-
-# todo: make it so repeats of the same material are addressed. i.e: HEAD D and HEAD D eyes gouged are the same.
-# todo: get ears and other parts, also why aren't we getting strong types.
-# todo: for file in paths:
 source_path = Path('./modded_heads/source/')
 merged_material_root = ET.Element("root")
 
