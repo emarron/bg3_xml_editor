@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root>
-    <node id="Object">
-        <attribute id="MapKey" type="FixedString" value="P4_TIF_M_HEL_E.P4_TIF_M_HEL_E_Mesh.0" />
-        <attribute id="MapValue" type="FixedString" value="4f00cbaa-98ef-4cf0-b33e-96e22e7ebc1f" />
-    </node>
-</root>
