@@ -71,7 +71,7 @@ source_path = Path('./modded_heads/source/')
 merged_material_root = ET.Element("root")
 
 for path in source_path.rglob('*'):
-    if path.suffix == ('.lsx') and path.stem == ("_merged") and "CharacterCreation" not in str(path):
+    if path.suffix == ('.lsx') and "CharacterCreation" not in str(path):
         result = parse_xml(path)
         if result != None:
             merged_material_root.extend(result)
