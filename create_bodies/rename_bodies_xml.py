@@ -10,6 +10,7 @@ from tkinter import filedialog
 
 # create variant that accepts "_REMAPPED"
 
+
 def check_file_existence(file_path):
     # make sure its a path
     file_path = Path(file_path)
@@ -18,7 +19,8 @@ def check_file_existence(file_path):
     if path_as_str not in str(file_path.resolve()):
         output_text.config(state=tk.NORMAL)
         output_text.delete(1.0, tk.END)  # Clear existing text
-        output_text.insert(tk.END, f"The file '{file_path}' does not exist. Exiting program.\n")
+        output_text.insert(
+            tk.END, f"The file '{file_path}' does not exist. Exiting program.\n")
         output_text.config(state=tk.DISABLED)
         print(f"The file '{file_path}' does not exist. Exiting program.")
         autoresize_text_widget(output_text)
@@ -63,13 +65,15 @@ def replace_id(node, xml):
 
 def replace_source_file_path(node, output_source_file_path, xml):
     # make sure windows paths become unix paths
-    source_file_path_value = node.find(".//attribute[@id='SourceFile']").get('value')
+    source_file_path_value = node.find(
+        ".//attribute[@id='SourceFile']").get('value')
     return xml.replace(source_file_path_value, str(output_source_file_path.as_posix()))
 
 
 def replace_template_file_path(node, output_source_file_path, xml):
     # make sure windows paths become unix paths
-    template_file_path_value = node.find(".//attribute[@id='Template']").get('value')
+    template_file_path_value = node.find(
+        ".//attribute[@id='Template']").get('value')
     return xml.replace(template_file_path_value, str(output_source_file_path.with_suffix('.Dummy_Root.0').as_posix()))
 
 
@@ -87,7 +91,7 @@ def is_subdirectory(child, parent):
         return False
 
 
-def generate_xml():
+# def generate_xml():
     try:
         base_directory = Path.cwd()  # Get the current working directory
         base_xml_path = Path(base_xml_entry.get())
@@ -108,7 +112,8 @@ def generate_xml():
             autoresize_text_widget(output_text)
             return
 
-        output_dir_path = Path(output_dir_entry.get()).relative_to(base_directory)
+        output_dir_path = Path(output_dir_entry.get()
+                               ).relative_to(base_directory)
 
         # Check file existence
         check_file_existence(base_xml_path)
@@ -139,9 +144,12 @@ def generate_xml():
 
         reference_xml = ET.parse(str(reference_xml_path))
         # reference_skel_bank = reference_xml.getroot().find(".//region[@id='SkeletonBank']")
-        reference_mat_bank = reference_xml.getroot().find(".//region[@id='MaterialBank']")
-        reference_tex_bank = reference_xml.getroot().find(".//region[@id='TextureBank']")
-        reference_vis_bank = reference_xml.getroot().find(".//region[@id='VisualBank']")
+        reference_mat_bank = reference_xml.getroot().find(
+            ".//region[@id='MaterialBank']")
+        reference_tex_bank = reference_xml.getroot().find(
+            ".//region[@id='TextureBank']")
+        reference_vis_bank = reference_xml.getroot().find(
+            ".//region[@id='VisualBank']")
 
         # for resource_node in reference_skel_bank.findall(".//node[@id='Resource']"):
         #     name = resource_node.find(".//attribute[@id='Name']").get("value")
@@ -169,7 +177,8 @@ def generate_xml():
         base_xml = ET.parse(str(base_xml_path))
         # this is for our generated node
         # base_skel_bank = base_xml.getroot().find(".//region[@id='SkeletonBank']")
-        base_mat_bank = base_xml.getroot().find(".//region[@id='MaterialBank']")
+        base_mat_bank = base_xml.getroot().find(
+            ".//region[@id='MaterialBank']")
         base_tex_bank = base_xml.getroot().find(".//region[@id='TextureBank']")
         base_vis_bank = base_xml.getroot().find(".//region[@id='VisualBank']")
 
@@ -183,14 +192,21 @@ def generate_xml():
 
         # now there are many ways one could go about updating entries but...... lets do it the shitty way
         # replace UUIDs:
-        str_base_xml = ET.tostring(base_xml.getroot(), encoding='utf-8').decode('utf-8')
+        str_base_xml = ET.tostring(
+            base_xml.getroot(), encoding='utf-8').decode('utf-8')
         # str_base_xml, skeleton_uuid = replace_id(reference_skeleton_node, str_base_xml)
-        str_base_xml, material_uuid = replace_id(reference_material_node, str_base_xml)
-        str_base_xml, texture_clea_uuid = replace_id(reference_texture_clea_node, str_base_xml)
-        str_base_xml, texture_msk_uuid = replace_id(reference_texture_msk_node, str_base_xml)
-        str_base_xml, texture_hmvy_uuid = replace_id(reference_texture_hmvy_node, str_base_xml)
-        str_base_xml, texture_nm_uuid = replace_id(reference_texture_nm_node, str_base_xml)
-        str_base_xml, visual_uuid = replace_id(reference_visual_node, str_base_xml)
+        str_base_xml, material_uuid = replace_id(
+            reference_material_node, str_base_xml)
+        str_base_xml, texture_clea_uuid = replace_id(
+            reference_texture_clea_node, str_base_xml)
+        str_base_xml, texture_msk_uuid = replace_id(
+            reference_texture_msk_node, str_base_xml)
+        str_base_xml, texture_hmvy_uuid = replace_id(
+            reference_texture_hmvy_node, str_base_xml)
+        str_base_xml, texture_nm_uuid = replace_id(
+            reference_texture_nm_node, str_base_xml)
+        str_base_xml, visual_uuid = replace_id(
+            reference_visual_node, str_base_xml)
 
         # replace source file paths:
         # str_base_xml = replace_source_file_path(reference_skeleton_node, output_paths_dict['skeleton_path'],
@@ -203,12 +219,14 @@ def generate_xml():
                                                 str_base_xml)
         str_base_xml = replace_source_file_path(reference_texture_nm_node, output_paths_dict['texture_nm_path'],
                                                 str_base_xml)
-        str_base_xml = replace_source_file_path(reference_visual_node, output_paths_dict['body_path'], str_base_xml)
+        str_base_xml = replace_source_file_path(
+            reference_visual_node, output_paths_dict['body_path'], str_base_xml)
 
         # replace template file paths:
         # str_base_xml = replace_template_file_path(reference_skeleton_node, output_paths_dict['skeleton_path'],
         #                                           str_base_xml)
-        str_base_xml = replace_template_file_path(reference_visual_node, output_paths_dict['body_path'], str_base_xml)
+        str_base_xml = replace_template_file_path(
+            reference_visual_node, output_paths_dict['body_path'], str_base_xml)
 
         # replace names:
         str_base_xml = replace_name(reference_name, output_name, str_base_xml)
@@ -218,7 +236,7 @@ def generate_xml():
             file.write('<?xml version="1.0" encoding="utf-8"?>\n')
             file.write(str_base_xml)
         print(f"Wrote file to _merged.lsx, make sure to copy the Visual Reference ID to your "
-                                   f"CharacterCreationAppearanceVisuals.lsx")
+              f"CharacterCreationAppearanceVisuals.lsx")
         print(f"Visual Reference UUID: {visual_uuid}")
         output_text.insert(tk.END, f"Wrote file to _merged.lsx, make sure to copy the Visual Reference ID to your "
                                    f"CharacterCreationAppearanceVisuals.lsx\n")
@@ -228,6 +246,192 @@ def generate_xml():
 
     except FileNotFoundError as e:
         pass  # You can add your error handling code here
+
+
+def update_gui_text(text_widget, messages):
+    text_widget.config(state=tk.NORMAL)
+    text_widget.delete(1.0, tk.END)  # Clear existing text
+    for message in messages:
+        text_widget.insert(tk.END, message + "\n")
+    text_widget.config(state=tk.DISABLED)
+    autoresize_text_widget(text_widget)
+
+
+def validate_output_directory(output_dir_path, base_directory):
+    if not is_subdirectory(output_dir_path, base_directory):
+        message = (f"The output directory '{output_dir_path}' is not inside the base directory '{base_directory}'. "
+                   f"Stopping generate_xml.")
+        update_gui_text(output_text, [message])
+        print(message)
+        return False
+    return True
+
+
+def validate_files_existence(paths):
+    for path in paths:
+        check_file_existence(path)
+
+
+def extract_reference_nodes(xml_root, references_dict):
+    material_bank = xml_root.find(".//region[@id='MaterialBank']")
+    texture_bank = xml_root.find(".//region[@id='TextureBank']")
+    visual_bank = xml_root.find(".//region[@id='VisualBank']")
+
+    reference_nodes = {}
+    # Extract material node
+    for node in material_bank.findall(".//node[@id='Resource']"):
+        name = node.find(".//attribute[@id='Name']").get("value")
+        if references_dict['name'].lower() == name.lower():
+            reference_nodes['material'] = node
+
+    # Extract texture nodes
+    for node in texture_bank.findall(".//node[@id='Resource']"):
+        name = node.find(".//attribute[@id='Name']").get("value")
+        for key in ['texture_clea_name', 'texture_hmvy_name', 'texture_msk_name', 'texture_nm_name']:
+            if references_dict[key].lower() == name.lower():
+                reference_nodes[key] = node
+
+    # Extract visual node
+    for node in visual_bank.findall(".//node[@id='Resource']"):
+        name = node.find(".//attribute[@id='Name']").get("value")
+        if references_dict['name'].lower() == name.lower():
+            reference_nodes['visual'] = node
+
+    return reference_nodes
+
+
+def create_resources_in_banks(reference_nodes, base_banks):
+    for key, node in reference_nodes.items():
+        if 'texture' in key:
+            bank_key = 'texture'
+        else:
+            bank_key = key
+
+        # Ensure the base bank exists for this type of node
+        if bank_key in base_banks:
+            create_resource_in_bank(node, base_banks[bank_key])
+        else:
+            print(f"Warning: No base bank found for key: {bank_key}")
+
+
+def replace_ids_and_paths_in_xml(str_base_xml, reference_nodes, output_paths_dict):
+    uuids = {}
+
+    # Replace UUIDs
+    for key, node in reference_nodes.items():
+        str_base_xml, extracted_uuid = replace_id(node, str_base_xml)
+        uuids[key] = extracted_uuid
+
+    # Replace source file paths
+    for key, node in reference_nodes.items():
+        if key in output_paths_dict:
+            str_base_xml = replace_source_file_path(
+                node, output_paths_dict[key], str_base_xml)
+
+    # Replace template file paths (add more logic here if needed)
+    str_base_xml = replace_template_file_path(
+        reference_nodes['visual'], output_paths_dict['body_path'], str_base_xml)
+
+    return str_base_xml, uuids.get('visual', None)
+
+
+def merge_xml_nodes(target_node, source_node):
+    """
+    Merge children of source_node into target_node
+    """
+    for child in source_node:
+        target_node.append(child)
+
+
+def merge_xml(existing_xml_str, new_xml_str):
+    existing_root = ET.fromstring(existing_xml_str)
+    new_root = ET.fromstring(new_xml_str)
+
+    # List of region IDs to target for merging
+    region_ids = ["MaterialBank", "VisualBank", "TextureBank"]
+
+    for region_id in region_ids:
+        # Locate the target and source nodes for each region ID
+        target_node = existing_root.find(
+            f".//region[@id='{region_id}']/node[@id='{region_id}']/children")
+        source_node = new_root.find(
+            f".//region[@id='{region_id}']/node[@id='{region_id}']/children")
+
+        # If both nodes exist, merge them
+        if target_node is not None and source_node is not None:
+            merge_xml_nodes(target_node, source_node)
+
+    return ET.tostring(existing_root, encoding='utf-8').decode('utf-8')
+
+
+def write_xml_to_file(output_path, str_base_xml):
+    if output_path.exists():
+        with open(output_path, 'r', encoding='utf-8') as file:
+            existing_data = file.read()
+        merged_xml = merge_xml(existing_data, str_base_xml)
+        with open(output_path, 'w', encoding='utf-8') as file:
+            file.write('<?xml version="1.0" encoding="utf-8"?>\n')
+            file.write(merged_xml)
+    else:
+        with open(output_path, 'w', encoding='utf-8') as file:
+            file.write('<?xml version="1.0" encoding="utf-8"?>\n')
+            file.write(str_base_xml)
+
+
+def generate_xml():
+    try:
+        base_directory = Path.cwd()
+        base_xml_path = Path(base_xml_entry.get())
+        reference_xml_path = Path(reference_xml_entry.get())
+        reference_name = reference_name_entry.get()
+        output_dir_path = Path(output_dir_entry.get()).resolve()
+        output_name = output_name_entry.get()
+
+        if not validate_output_directory(output_dir_path, base_directory):
+            return
+
+        validate_files_existence(
+            [base_xml_path, reference_xml_path, output_dir_path])
+
+        references_dict = create_variants(reference_name)
+        outputs_dict = create_variants(output_name)
+        output_paths_dict = create_variant_paths(output_dir_path, outputs_dict)
+
+        validate_files_existence(output_paths_dict.values())
+
+        reference_xml = ET.parse(str(reference_xml_path))
+        reference_nodes = extract_reference_nodes(
+            reference_xml.getroot(), references_dict)
+
+        base_xml = ET.parse(str(base_xml_path))
+        # Extract banks from base_xml
+        base_banks = {
+            'material': base_xml.getroot().find(".//region[@id='MaterialBank']"),
+            'texture': base_xml.getroot().find(".//region[@id='TextureBank']"),
+            'visual': base_xml.getroot().find(".//region[@id='VisualBank']")
+        }
+
+        create_resources_in_banks(reference_nodes, base_banks)
+
+        str_base_xml, visual_uuid = replace_ids_and_paths_in_xml(
+            ET.tostring(base_xml.getroot(), encoding='utf-8').decode('utf-8'),
+            reference_nodes,
+            output_paths_dict
+        )
+
+        write_xml_to_file(Path("_merged.lsx"), str_base_xml)
+
+        update_gui_text(output_text, [
+            "All files exist, beginning program, please make sure your Reference Body Name is properly typed as I can't check for that.",
+            f"Reference Body Name: {reference_name}",
+            f"Output Body Name: {output_name}",
+            f"Wrote file to _merged.lsx, make sure to copy the Visual Reference ID to your CharacterCreationAppearanceVisuals.lsx",
+            f"Visual Reference UUID: {visual_uuid}"
+        ])
+
+    except FileNotFoundError as e:
+        # Handle the exception
+        pass
 
 
 def browse_file(entry):
@@ -247,8 +451,10 @@ def autoresize_text_widget(widget):
     widget.config(height=lines)
 
     # Calculate the maximum line length to set the width accordingly
-    max_line_length = max(len(line) for line in widget.get(1.0, tk.END).splitlines())
-    widget.config(width=max_line_length + 2)  # Add some extra space for visibility
+    max_line_length = max(len(line)
+                          for line in widget.get(1.0, tk.END).splitlines())
+    # Add some extra space for visibility
+    widget.config(width=max_line_length + 2)
 
 
 root = tk.Tk()
@@ -257,12 +463,14 @@ root.title("XML Processing")
 tk.Label(root, text="Base XML Path:").pack()
 base_xml_entry = tk.Entry(root)
 base_xml_entry.pack()
-tk.Button(root, text="Browse", command=lambda: browse_file(base_xml_entry)).pack()
+tk.Button(root, text="Browse",
+          command=lambda: browse_file(base_xml_entry)).pack()
 
 tk.Label(root, text="Reference XML Path:").pack()
 reference_xml_entry = tk.Entry(root)
 reference_xml_entry.pack()
-tk.Button(root, text="Browse", command=lambda: browse_file(reference_xml_entry)).pack()
+tk.Button(root, text="Browse", command=lambda: browse_file(
+    reference_xml_entry)).pack()
 
 tk.Label(root, text="Reference Name:").pack()
 reference_name_entry = tk.Entry(root)
@@ -271,7 +479,8 @@ reference_name_entry.pack()
 tk.Label(root, text="Output Directory Path:").pack()
 output_dir_entry = tk.Entry(root)
 output_dir_entry.pack()
-tk.Button(root, text="Browse", command=lambda: browse_directory(output_dir_entry)).pack()
+tk.Button(root, text="Browse", command=lambda: browse_directory(
+    output_dir_entry)).pack()
 
 # Adding the "Output Name" section
 tk.Label(root, text="Output Name:").pack()
